@@ -58,10 +58,14 @@ void awaken(){
     delay(20);
   }
   doubleBlink();
+  digitalWrite(LEFT_EYE,HIGH);
+  digitalWrite(RIGHT_EYE,HIGH);  
   for(int i = 0; i < NUM_RINGS; i++){
     digitalWrite(RINGS[i], HIGH);
     delay(100);
   }
+
+  delay(stareInterval);
 }
 
 
@@ -75,6 +79,7 @@ void setup() {
     pinMode(i, OUTPUT);
     digitalWrite(i, LOW);
   }
+  awaken();
 }
 
 void loop() {
