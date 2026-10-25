@@ -17,13 +17,13 @@ int blinkCount = 0;
 void wink(){
   for(int i = 255; i > 0; i = i - 2){
     analogWrite(RIGHT_EYE, i);
-    delay(1);
+    delay(2);
   }
   digitalWrite(RIGHT_EYE, LOW);
-  delay(200);
+  delay(500);
   for(int i = 0; i < 255; i = i + 2){
     analogWrite(RIGHT_EYE, i);
-    delay(1);
+    delay(2);
   }
 }
 
@@ -55,19 +55,18 @@ void awaken(){
   for(int i = 0; i < 256; i++){
     analogWrite(LEFT_EYE, i);
     analogWrite(RIGHT_EYE, i);
-    delay(20);
+    delay(10);
   }
   doubleBlink();
+  //wink();
   digitalWrite(LEFT_EYE,HIGH);
   digitalWrite(RIGHT_EYE,HIGH);  
   for(int i = 0; i < NUM_RINGS; i++){
     digitalWrite(RINGS[i], HIGH);
     delay(100);
   }
-
   delay(stareInterval);
 }
-
 
 void setup() {
 
