@@ -1,3 +1,5 @@
+// Jimothy SAO v0
+
 #include <Arduino.h>
 
 const int LEFT_EYE = PIN_PB0;
@@ -106,3 +108,4 @@ void loop() {
 
 }
 
+// [♥️]znjp
